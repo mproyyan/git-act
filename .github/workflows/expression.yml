@@ -15,3 +15,10 @@ jobs:
       - name: else contains
         if: ${{ !contains('hello world', 'world') }}
         run: echo "hello world not contains world"
+
+      - name: if startsWith
+        if: ${{ startsWith('hello', 'he') }}
+        run: echo "hello start with he"
+      - name: else startsWith
+        if: ${{ !startsWith('hello', 'he') }}
+        run: echo "hello not start with he"
