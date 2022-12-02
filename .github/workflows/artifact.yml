@@ -19,9 +19,8 @@ jobs:
 
   download-from-artifact:
     needs: upload-to-artifact
-    name: download log from artifact
     steps:
-      name: download output.log
-      uses: actions/download-artifact@v3
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
         with:
           name: output-log-file
