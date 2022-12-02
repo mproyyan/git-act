@@ -6,6 +6,7 @@ on:
 
 jobs:
   upload-to-artifact:
+    runs-on: ubuntu-latest
     name: save and upload log
     steps:
       - shell: bash
@@ -18,6 +19,7 @@ jobs:
           path: output.log
 
   download-from-artifact:
+    runs-on: ubuntu-latest
     needs: upload-to-artifact
     steps:
       - name: Download a single artifact
