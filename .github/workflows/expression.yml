@@ -22,3 +22,10 @@ jobs:
       - name: else startsWith
         if: ${{ !startsWith('hello', 'he') }}
         run: echo "hello not start with he"
+
+      - name: if endsWith
+        if: ${{ endsWith('hello', 'lo') }}
+        run: echo "hello end with lo"
+      - name: else endsWith
+        if: ${{ !endsWith('hello', 'lo') }}
+        run: echo "hello not end with lo"
