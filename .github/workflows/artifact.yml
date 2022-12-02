@@ -1,0 +1,24 @@
+name: Sharing Data Between Jobs Using Artifact
+
+on:
+  push:
+    branches: [sharing-data]
+
+jobs:
+  upload-to-artifact:
+    name: save and upload log
+    steps:
+      - shell: bash
+        run: |
+          expr 1 + 1 > output.log
+        name: upload log
+        uses: actions/upload-artifact@v3
+        with:
+          name: output-log-file
+          path: output.log
+
+  download-from-artifact:
+    name: download log from artifact
+    uses: actions/download-artifact@v3
+      with:
+        name: output-log-file
