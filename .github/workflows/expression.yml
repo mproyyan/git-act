@@ -1,0 +1,17 @@
+name: Expressions Testing
+
+on:
+  push:
+    branches: [expressions]
+
+jobs:
+  expressions-testing:
+    name: test all expression
+    runs-on: ubuntu-latest
+    steps:
+      - name: if contains
+        if: ${{ contains('hello world', 'world') }}
+        run: echo "hello world contains world"
+      - name: else contains
+        if: ${{ !contains('hello world', 'world') }}
+        run: echo "hello world not contains world"
