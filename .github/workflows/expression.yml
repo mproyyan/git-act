@@ -41,4 +41,4 @@ jobs:
 
       - name: fromJson()
         env: ${{ fromJSON('{"FAV_FRUIT":"apple", "FAV_COLOR":"blue"}') }}
-        run: echo 'saya suka buah ${FAV_FRUIT} dan warna favorit saya adalah warna ${FAV_COLOR}'
+        run: echo "saya suka buah ${FAV_FRUIT} dan warna favorit saya adalah warna ${FAV_COLOR}"
