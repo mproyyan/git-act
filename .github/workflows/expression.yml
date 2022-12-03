@@ -32,3 +32,6 @@ jobs:
 
       - name: format 'hello {0} {1} {2}!' to 'hello muhammad pandu royyan'
         run: echo ${{ format('hello {0} {1} {2}!', 'muhammad', 'pandu', 'royyan') }}
+
+      - name: join an array into a string
+        run: echo ${{ join('["banana", "apple"]', ', ') }}
