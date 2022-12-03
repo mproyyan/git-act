@@ -38,3 +38,7 @@ jobs:
 
       - name: format object into json using toJson()
         run: echo '${{ toJson(github.event) }}'
+
+      - name: fromJson()
+        env: ${{ fromJSON('{"FAV_FRUIT":"apple", "FAV_COLOR":"blue"}') }}
+        run: echo 'saya suka buah ${FAV_FRUIT} dan warna favorit saya adalah warna ${FAV_COLOR}'
