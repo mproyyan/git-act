@@ -37,4 +37,4 @@ jobs:
         run: echo ${{ join('["banana", "apple"]', ', ') }}
 
       - name: format object into json using toJson()
-        run: echo ${{ toJson(github.event) }}
+        run: echo '${{ toJson(github.event) }}'
