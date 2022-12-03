@@ -35,3 +35,6 @@ jobs:
 
       - name: join an array into a string
         run: echo ${{ join('["banana", "apple"]', ', ') }}
+
+      - name: format object into json using toJson()
+        run: echo ${{ toJson(github.event) }}
