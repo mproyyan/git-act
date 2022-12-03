@@ -29,3 +29,6 @@ jobs:
       - name: else endsWith
         if: ${{ !endsWith('hello', 'lo') }}
         run: echo "hello not end with lo"
+
+      - name: format 'hello {1} {2} {3}!' to 'hello muhammad pandu royyan'
+        run: echo ${{ format('hello {1} {2} {3}!', 'muhammad', 'pandu', 'royyan') }}
