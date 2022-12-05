@@ -18,15 +18,25 @@ jobs:
     steps:
       - name: GITHUB_OUTPUT before echo
         run: echo $GITHUB_OUTPUT
+
+      - name: Concatenate GITHUB_OUTPUT before echo
+        run: cat $GITHUB_OUTPUT
     
       - id: step1
-        run: echo "test=hello" >> $GITHUB_OUTPUT
+        run: |
+          echo "test=hello" >> $GITHUB_OUTPUT
+          cat $GITHUB_OUTPUT
 
       - id: step2
-        run: echo "test=world" >> $GITHUB_OUTPUT
+        run: |
+          echo "test=world" >> $GITHUB_OUTPUT
+          cat $GITHUB_OUTPUT
 
       - name: GITHUB_OUTPUT after echo
         run: echo $GITHUB_OUTPUT
+
+      - name: Concatenate GITHUB_OUTPUT after echo
+        run: cat $GITHUB_OUTPUT
 
   job2:
     runs-on: ubuntu-latest
