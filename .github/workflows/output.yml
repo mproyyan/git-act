@@ -1,3 +1,13 @@
+name: Test Job Output
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+
+on: 
+  push:
+    branches:
+      - job-output
+
+  workflow_dispatch:
+
 jobs:
   job1:
     runs-on: ubuntu-latest
